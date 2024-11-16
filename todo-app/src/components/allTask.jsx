@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 const AllTask = ({
   taskContainer,
+  setTaskContainer,
   setCompletedTask,
   completedTask,
   taskStatuses,
@@ -48,7 +49,16 @@ const AllTask = ({
                 {item}
               </span>
             </li>
-            <button>delete</button>
+            <button
+              onClick={() => {
+                setTaskContainer(taskContainer.filter((task) => task !== item));
+                const updatedStatuses = { ...taskStatuses };
+                delete updatedStatuses[idx];
+                setTaskStatuses(updatedStatuses);
+              }}
+            >
+              delete
+            </button>
           </ul>
         ))}
       </div>

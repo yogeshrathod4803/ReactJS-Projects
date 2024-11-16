@@ -73,6 +73,7 @@ const Home = () => {
             ) : (
               <AllTask
                 taskContainer={taskContainer}
+                setTaskContainer={setTaskContainer}
                 setCompletedTask={setCompletedTask}
                 completedTask={completedTask}
                 setTaskStatuses={setTaskStatuses}
