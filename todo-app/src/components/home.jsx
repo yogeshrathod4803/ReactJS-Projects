@@ -37,7 +37,7 @@ const Home = () => {
           className="featureSection"
           style={{
             display: "flex",
-            marginLeft: "300px",
+            justifyContent: "center",
             padding: "0 10px 0 10px",
           }}
         >
